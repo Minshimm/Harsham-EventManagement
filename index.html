@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsham Event Management Ltd</title>
+    <link rel="icon" type="image/png" href="./images/LOGO_HARSHAM.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Matemasie&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+          body {
+             font-family: "Dancing Script", cursive;
+            background-image: url('./images/2.jpg');
+             background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; /* This ensures the background stays fixed when scrolling */
+          }
+         h1{
+            font-family: "Matemasie", sans-serif;
+            text-align: center;
+         }
+         * {
+           margin: 0;
+            padding: 0;
+           box-sizing: border-box;
+        }
+        .carousel-container {
+          position: relative;
+          width: 100%;
+          max-width:100%;
+          margin: 0 auto;
+        }
+      
+        .carousel-inner {
+          display: flex;
+          width: 100%;
+          animation: slide 12s infinite;
+        }
+      
+        .carousel-item {
+          width: 100%;
+          flex-shrink: 0;
+        }
+      
+        @keyframes slide {
+            0%, 20% {
+               transform: translateX(0%);
+             }
+             25%, 45% {
+                 transform: translateX(-100%);
+             }
+             50%, 70% {
+                transform: translateX(-200%);
+              }
+             75%, 100% {
+                transform: translateX(-300%);
+              }
+        }
+    </style>
+</head>
+<body>
+<!-- navbar  -->
+    <nav class="text-2xl font-extrabold z-50 fixed top-0 w-full bg-white bg-opacity-80" >
+        <div class="max-w-screen-xl flex items-center justify-between mx-auto">
+            <div class="flex ">
+                <img src="./images/LOGO_HARSHAM.png" class="h-20" alt="Flowbite Logo" />
+                <span class="self-center text-pink-800 text-6xl ">Harsham </span>
+            </div>
+            <div class="hidden w-full md:block md:w-auto " id="navbar-dropdown">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0  ">
+                    <li>
+                        <a href="./index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 mt-3">Home</a>
+                    </li>
+                    <li class="relative group ">
+                        <button class="flex items-center justify-between w-full py-2  text-gray-900  hover:text-blue-700 ">Services
+                            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div class="absolute left-0 z-10 hidden w-44 pt-2 group-hover:block">
+                            <div class=" divide-y divide-gray-100 rounded-lg shadow ">
+                                <ul class="py-2 text-xl text-gray-900  bg-white">
+                                    <li>
+                                        <a href="" class="block px-4 py-2 hover:text-blue-700  ">Wedding Ceremony</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:text-blue-700 ">Corporate Events</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:text-blue-700  ">Venue Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:text-blue-700  ">Party Planning</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:text-blue-700  ">Non-Profit Events </a>
+                                    </li>
+                                </ul>
+                                <!-- <div class="py-1">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:text-blue-700 ">Sign out</a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-gray-900 md:hover:text-blue-700 md:p-0 mt-3">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-gray-900 md:hover:text-blue-700 md:p-0 mt-3">Clients</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block text-gray-900 rounded hover:bg-gray-100   md:hover:text-blue-700 md:p-0 mt-3 mr-56">Team</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block text-gray-900 md:hover:text-blue-700 md:p-0 mt-3 mr-10 ">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- carousal   -->
+<div class="carousel-container relative w-full mt-20">
+    <div class="carousel-inner flex">
+      <div class="carousel-item w-full flex-shrink-0">
+        <img src="./images/b2" alt="Image 1" class="w-full h-96">
+      </div>
+      <div class="carousel-item w-full flex-shrink-0">
+        <img src="./images/bg4.jpeg" alt="Image 2" class="w-full h-96">
+      </div>
+      <div class="carousel-item w-full flex-shrink-0">
+        <img src="./images/bg7.jpeg" alt="Image 3" class="w-full h-96">
+      </div>
+      <div class="carousel-item w-full flex-shrink-0">
+        <img src="./images/b2" alt="Image 1" class="w-full h-96">
+      </div>
+    </div>
+  </div>
+<!-- Happy Customers -->
+    <div class="max-w-4xl mx-auto my-8">
+        <div class=" my-8 bg-red-100 rounded-lg p-6 shadow-lg ">
+            <h1 class="text-pink-600 pb-5 text-2xl">Creating Memorable Events Tailored To The Client</h1>
+            <p class="items-center text-2xl">Based in Harsham designs and executes special occasions shaped to meet the client's style and personality. From large, branded corporate events to intimate weddings and everything in between, V R Vaishnav and team provide unique insights that will make your big day unforgettable.</p>
+       </div>
+    </div>
+<!-- services   -->
+  <!-- wedding -->
+    <div>
+        <img src="./images/wedding.jpeg"  class="w-full h-52 opacity-70" style=" position:absolute">
+        <h1 class="text-pink-700 text-2xl pt-20 " style="position: relative;">WEDDING</h1>
+    </div>
+    <div class="max-w-4xl mx-auto my-8 mt-32">
+        <div class=" my-8 bg-red-100 rounded-lg p-6 shadow-lg ">
+            <h1 class="text-pink-600 pb-5 text-2xl">Wedding Packages</h1>
+            <p class="items-center text-2xl">Harsham offers a variety of packages to meet your specific wedding planning needs. While the packages range in services offered, each includes consulting with a team of experts who have experience in wedding planning. If there is a package that doesn't quite fit what you're looking for, please contact us for individualized options.</p>
+            <img src="./images/icon.png" alt="" class="pl-80">
+            <div class="flex justify-center mt-5">
+                <a href="">
+                    <button class="bg-pink-600 hover:bg-white hover:text-pink-600 text-black text-2xl py-2 px-4 rounded">Enquiry</button>
+                </a>
+            </div>
+       </div>
+    </div>
+  <!-- corporate -->
+    <div>
+        <img src="./images/corp"  class="w-full h-52 opacity-70" style=" position:absolute">
+        <h1 class="text-pink-700 text-2xl pt-10" style="position: relative;">CORPORATE</h1>
+    </div>
+    <div class="max-w-4xl mx-auto my-8 mt-44">
+        <div class=" my-8 bg-red-100 rounded-lg p-6 shadow-lg ">
+            <h1 class="text-pink-600 pb-5 text-2xl">Meetings, Galas, Openings, Product Launches</h1>
+            <p class="items-center text-2xl">Every event has its own distinct audience, tone, personality, and set of objectives. From small meetings to large corporate galas, Harsham ensures that each event is specifically created to match its' intent.</p> 
+              <p class="items-center text-2xl" > Whether you need help planning a conference, corporate luncheon, team-building event, award dinner, or holiday party, we can expertly create and execute any event to fit your vision and needs.
+            </p>
+            <div class="flex justify-center mt-5">
+                <a href="">
+                    <button class="bg-pink-600 hover:bg-white hover:text-pink-600 text-black text-2xl py-2 px-4 rounded">Enquiry</button>
+                </a>
+            </div>
+       </div>
+    </div>
+  <!-- VenueManagement -->
+     <div>
+        <img src="./images/venue.jpg"  class="w-full h-52 opacity-70" style=" position:absolute">
+        <h1 class="text-pink-700 text-2xl pt-10" style="position: relative;">VENUE MANAGEMENT</h1>
+     </div>
+     <div class="max-w-4xl mx-auto my-8 mt-44">
+        <div class=" my-8 bg-red-100 rounded-lg p-6 shadow-lg ">
+            <h1 class="text-pink-600 pb-5 text-2xl">Venues and Venue Booking Agents</h1>
+            <p class="items-center text-2xl">We are able to represent your venue as a 'Venue Booking Agent' in which we create and negotiate contracts, coordinate and produce (when applicable) all proposed events and productions held at the agreed upon venue. </p> 
+              <p class="items-center text-2xl" >If the agent services are needed for an extended period of time (over a year), the terms can be changed to reflect an ongoing relationship for bookings during the term of the agreement. The contract is set up to be an exclusive partnership between the venue booking agent and the venue itself.
+            </p>
+            <div class="flex justify-center mt-5">
+                <a href="">
+                    <button class="bg-pink-600 hover:bg-white hover:text-pink-600 text-black text-2xl py-2 px-4 rounded">Enquiry</button>
+                </a>
+            </div>
+       </div>
+    </div>
+  <!-- Party planning -->
+     <div>
+         <img src="./images/party"  class="w-full h-52 opacity-70" style=" position:absolute">
+         <h1 class="text-pink-700 text-2xl pt-20" style="position: relative;">PARTY PLANNING</h1>
+     </div>
+     <div class="max-w-4xl mx-auto my-8 mt-28">
+         <div class=" my-8 bg-red-100 rounded-lg p-6 shadow-lg ">
+            <h1 class="text-pink-600 pb-5 text-2xl">Party Planning By Design</h1>
+            <p class="items-center text-2xl">You want a party but not the planning that goes with it? Perfect. We know first hand that planning an event on your own can be difficult and extremely time-consuming. Having a celebration is supposed to be fun, so leave your stress at home and let us do the work for you! </p> <br>
+            <p class="items-center text-2xl" >You want a party but not the planning that goes with it? Perfect. We know first hand that planning an event on your own can be difficult and extremely time-consuming. Having a celebration is supposed to be fun, so leave your stress at home and let us do the work for you! Harsham can help you create a fun and successful event, so the only planning you need to worry about is what to wear! 
+            </p>
+            <div class="flex justify-center mt-5">
+               <a href="">
+                   <button class="bg-pink-600 hover:bg-white hover:text-pink-600 text-black text-2xl py-2 px-4 rounded">Enquiry</button>
+                </a>
+            </div>
+          </div>
+     </div>
+  <!-- Charity events -->
+     <div>
+        <img src="./images/charity.jpeg"  class="w-full h-52 opacity-96" style=" position:absolute">
+        <h1 class="text-pink-700 text-2xl pt-36" style="position: relative;">NON - PROFIT </h1>
+     </div>
+     <div class="max-w-4xl mx-auto my-8 mt-16">
+       <div class=" my-8 bg-red-100 rounded-lg p-6 shadow-lg ">
+           <h1 class="text-pink-600 pb-5 text-2xl">Non - Profit & Charity Events</h1>
+           <p class="items-center text-2xl">Harsham strongly believes that philanthropy and community engagement is extremely important in today's world. As a result, we strive to make it simple and affordable for individuals and companies of all sizes to host charity events that support and/or give to those in need. </p> <br>
+           <p class="items-center text-2xl" >Though planning charity events or fundraisers can be personally fulfilling projects to embark upon; like any occasion, they can also be tough work with a host of different components to consider and coordinate. Harsham makes it easy by doing all of the work for you!
+           </p>
+           <div class="flex justify-center mt-5">
+                <a href="">
+              <button class="bg-pink-600 hover:bg-white hover:text-pink-600 text-black text-2xl py-2 px-4 rounded">Contact Us</button>
+              </a>
+           </div>
+       </div>
+    </div>
+<!-- up Coming Events   -->
+    <div class="mb-12">
+        <img src="./images/upcome.jpg"  class="w-full h-52 mb-8">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="flex justify-center">
+              <img src="./images/w1.jpg" alt="Event 1" class=" h-56">
+            </div>
+            <div class="flex justify-center">
+              <img src="./images/bir1.jpeg" alt="Event 2" class=" h-56">
+            </div>
+            <div class="flex justify-center">
+              <img src="./images/cop.jpeg" alt="Event 3" class=" h-56">
+            </div>
+          </div>
+    </div>
+  <!-- let's Talk   -->
+    <div>
+        <img src="./images/talk.jpg"  class="w-full h-52">
+        <div class="max-w-4xl mx-auto my-8 mt-16">
+            <div class=" my-8 bg-red-100 rounded-lg p-6 shadow-lg ">
+                <h1 class="text-pink-600 pb-5 text-2xl">About Us</h1>
+                <p class="items-center text-2xl">At Harsham, we are committed to and passionate about providing you with an amazing experience from planning to execution. Our team of experts will ensure that your vision becomes a reality. For more information or to inquire about receiving a quote for your event, please use to click below button. </p> <br>
+                <p class="text-xl "> <span class="text-2xl font-extrabold">Email :</span> info@harshamevents.com</p>
+                <p class="text-xl "> <span class="text-2xl font-extrabold">Phone :</span> +91 9656 134 154</p><br>
+                <span class="text-2xl font-extrabold">Harsham Events Kochi Office</span>
+                 <p class="text-xl "> 101-A , Tower Building, Aluva, 683101 </p><br>
+                 <span class="text-2xl font-extrabold">Harsham Events Thrissur Office</span>
+                 <p class="text-xl "> manath Tower, near Keralavarma College, Thrissur</p>
+                <div class="flex justify-center mt-5">
+                     <a href="">
+                   <button class="bg-pink-600 hover:bg-white hover:text-pink-600 text-black text-2xl py-2 px-4 rounded">Contact Us</button>
+                   </a>
+                </div>
+            </div>
+         </div>
+     </div>  
+ <!-- footer  -->
+ <footer class="bg-red-100 text-black py-12">
+    <div class="container mx-auto text-center">
+      <div class="flex justify-center space-x-10 mb-4">
+        <a href="./images/facebook" class="text-pink-700 hover:text-white">
+          <i class="fab fa-facebook-f"></i>
+          <span class="block text-lg">Like Us</span>
+        </a>
+        <a href="./images/twitter.png" class="text-pink-700 hover:text-white">
+          <i class="fab fa-twitter"></i>
+          <span class="block text-lg">Follow Us</span>
+        </a>
+        <a href="./images/insta" class="text-pink-700 hover:text-white">
+          <i class="fab fa-instagram"></i>
+          <span class="block text-lg">Instagram</span>
+        </a>
+        <a href="./images/pintrest.png" class="text-pink-700 hover:text-white">
+          <i class="fab fa-pinterest"></i>
+          <span class="block text-lg">Join The Pin Party</span>
+        </a>
+      </div>
+      <div class="text-black text-xl pt-8">
+       harshamevents © 2024
+      </div>
+    </div>
+  </footer> 
+</body>
+</html>
