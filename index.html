@@ -29,6 +29,10 @@
             padding: 0;
            box-sizing: border-box;
         }
+        #signin-modal:target {
+                 opacity: 1;
+                 pointer-events: auto;
+        }
         .carousel-container {
           position: relative;
           width: 100%;
@@ -118,12 +122,34 @@
                         <a href="#" class="block text-gray-900 rounded hover:bg-gray-100   md:hover:text-blue-700 md:p-0 mt-3 mr-56">Team</a>
                     </li>
                     <li>
-                        <a href="#" class="block text-gray-900 md:hover:text-blue-700 md:p-0 mt-3 mr-10 ">Sign In</a>
+                        <a href="#signin-modal" class="block text-gray-900 md:hover:text-blue-700 md:p-0 mt-3 mr-10 ">Sign In</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+<!-- Sign In Modal -->
+  <div id="signin-modal" class="z-10 fixed inset-0  flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
+    <div class="bg-red-100 p-8 rounded shadow-lg w-96 relative">
+      <h2 class="text-4xl mb-4 ml-24 text-pink-700 font-extrabold">Sign In</h2>
+      <form>
+        <div class="mb-4">
+          <label class="block text-black text-2xl">Username</label>
+          <input type="text" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Enter your username">
+        </div>
+        <div class="mb-4">
+          <label class="block text-black text-2xl">Password</label>
+          <input type="password" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Enter your password">
+        </div>
+        <button type="submit" class="bg-pink-600 text-white text-2xl hover:text-pink-600 hover:bg-white px-4 py-2 rounded">Sign In</button>
+        <div class="mt-4 text-sm">
+          <a href="#" class="text-pink-600 text-lg">Sign Up</a> if you're new here.
+        </div>
+      </form>
+      <a href="#" class="absolute top-0 right-0 mt-2 mr-2 text-gray-600 cursor-pointer">✕</a>
+    </div>
+  </div>
+</div>
 <!-- carousal   -->
 <div class="carousel-container relative w-full mt-20">
     <div class="carousel-inner flex">
