@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsham Event Management Ltd</title>
+    <link rel="icon" type="image/png" href="./images/LOGO_HARSHAM.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+         nav {
+             font-family: "Dancing Script", cursive;
+           
+          }
+         body{
+      font-family: "Josefin Sans", sans-serif;
+    }
+    h1{
+        /* font-family: "Matemasie", sans-serif; */
+        font-family: "Righteous", sans-serif;
+        text-align: center;
+     }
+     * {
+       margin: 0;
+        padding: 0;
+       box-sizing: border-box;
+    }
+    #signin-modal:target {
+             opacity: 1;
+             pointer-events: auto;
+    }  
+    </style>
+</head>
+<body>
+  <nav class="text-2xl font-extrabold z-50 fixed top-0 w-full bg-red-100 bg-opacity-80 nav" >
+    <div class="max-w-screen-xl flex items-center justify-between mx-auto">
+        <div class="flex ">
+            <img src="./images/logo.png" class="h-20" alt="Flowbite Logo" />
+            <span class="self-center text-pink-800 text-4xl ">Harsham </span>
+        </div>
+         <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1  1h15M1 7h15M1 13h15"/>
+              </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto " id="navbar-dropdown">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0  ">
+                <li>
+                    <a href="./index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 mt-3">Home</a>
+                </li>
+                <li class="relative group ">
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2  text-gray-900  hover:text-blue-700 ">Services
+                        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownNavbar" class="absolute left-0 z-10 hidden w-44 pt-2 group-hover:block">
+                        <div class=" divide-y divide-gray-100 rounded-lg shadow ">
+                            <ul class="py-2 text-xl text-gray-900  bg-white">
+                                <li>
+                                    <a href="./wedding.html" class="block px-4 py-2 hover:text-blue-700  ">Wedding Ceremony</a>
+                                </li>
+                                <li>
+                                    <a href="./coperate.html" class="block px-4 py-2 hover:text-blue-700 ">Corporate Events</a>
+                                </li>
+                                <li>
+                                    <a href="./venue.html" class="block px-4 py-2 hover:text-blue-700  ">Venue Management</a>
+                                </li>
+                                <li>
+                                    <a href="./party.html" class="block px-4 py-2 hover:text-blue-700  ">Party Planning</a>
+                                </li>
+                                <li>
+                                    <a href="./nonprofit.html" class="block px-4 py-2 hover:text-blue-700  ">Non-Profit Events </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./portfolio.html" class="block py-2 px-3 text-gray-900 md:hover:text-blue-700 md:p-0 mt-3">Portfolio</a>
+                </li>
+                <li>
+                    <a href="./team.html" class="block py-2 px-3 text-gray-900 md:hover:text-blue-700 md:p-0 mt-3">Team</a>
+                </li>
+                <li>
+                    <a href="./contact.html" class="block text-gray-900 rounded hover:bg-gray-100   md:hover:text-blue-700 md:p-0 mt-3 mr-56">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#signin-modal" class="block text-gray-900 md:hover:text-blue-700 md:p-0 mt-3 mr-10 ">Sign in/up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Sign In Modal -->
+<div id="signin-modal" class="z-50 fixed inset-0  flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
+<div class="bg-red-100 p-8 rounded shadow-lg w-96 relative">
+<h1 class="text-2xl mb-4  text-pink-700 font-extrabold">Sign In</h1>
+<form>
+  <div class="mb-4">
+    <label class="block text-black text-xl">Username</label>
+    <input type="text" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Enter your username">
+  </div>
+  <div class="mb-4">
+    <label class="block text-black text-xl">Password</label>
+    <input type="password" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Enter your password">
+  </div>
+  <button type="submit" class="bg-pink-600 text-white text-xl hover:text-pink-600 hover:bg-white px-4 py-2 rounded">Sign In</button>
+  <div class="mt-4 text-sm">
+    <a href="./signup.html" class="text-pink-700 text-xl">Sign Up</a> if you're new here.
+  </div>
+</form>
+<a href="#" class="absolute top-0 right-0 mt-2 mr-2 text-gray-600 cursor-pointer">✕</a>
+</div>
+</div>
+<!-- about Us -->
+<div class="container pt-24 border border-gray-300 w-full ">
+  <div class="grid grid-cols-2 gap-4 bg-gray-100 rounded shadow-md p-4">
+    <div>
+  <img src="./images/harshamName.png" alt="">
+</div>
+<div class="flex items-center justify-center text-xl" >
+  <p >Welcome to Harsham, where every event is a masterpiece in the making. We are a premier event management company dedicated to turning your dreams into reality. With a blend of creativity, precision, and passion, we specialize in crafting extraordinary experiences that leave lasting impressions. Whether it's an elegant wedding, a corporate gala, or an intimate celebration, our team of seasoned professionals ensures that every detail is flawlessly executed. At Harsham, we believe in creating moments that matter, and we're committed to making your event as unique as you are. Let us bring your vision to life with unmatched expertise and a personal touch that sets us apart.</p></div>
+</div>
+</div>
+<!-- team Members -->
+<div class="container mx-auto  pb-8 border shadow-lg">
+  <h1 class="text-pink-700 text-5xl pt-4 pb-8"  >Harsham Team</h1>
+  
+    <!-- Member1 1 -->
+    <div class="bg-white rounded overflow-hidden shadow-lg flex w-full border border-gray-300 ml-4 mt-4">
+      <img class="w-1/3 h-auto object-cover" src="./images/vaishnav.jpeg" alt="Image">
+      <div class="w-2/3 px-6 py-4">
+        <p class="font-bold text-xl mb-2">Event Manager</p><br>
+           <p class="font-extrabold">VR Vaishnav</p><br>
+            <p class="text-gray-700 text-base">
+              Vaishanav discovered his love for events back in high school with producing Battle of the Bands and spring concerts that featured local musical acts. After pursuing a degree in marketing at CSUN, he began managing hospitality and security for venues around Los Angeles. During this time, he was also regularly on the road working as a tour manager, production manager, audio engineer, lighting designer, and merchandise manager. In the last five years, vaishnav has transitioned his expertise into large scale event and festival production, while operating an Audie award winning recording studio.</p><br>
+             <p>
+              He has worked for venues such as The Penthouse at the Huntley Hotel, The Edison, The Highlands Nightclub, The Glendon Bar and Kitchen, and Elevate Lounge; and produced activations at Coachella, Lollapalooza, Outside Lands, Shaky Knees Fest, The Vans Warped Tour, and more.</p><br>
+              <p>
+              With a total of eight years venue management, 14 years in the touring industry, and 4 years of experiential marketing activations at festivals around the country, there isn't a problem that could arise for which Tim won't have a solution. 
+            </p>
+            
+      </div>
+    </div>
+    <!-- Member 2 -->
+    <div class="bg-white rounded overflow-hidden shadow-lg flex w-full border border-gray-300 ml-4 mt-4 ">
+       <img class="w-1/3 h-auto object-cover" src="./images/chinnu.JPG" alt="Image">
+       <div class="w-2/3 px-6 py-4">
+            <p class="font-bold text-xl mb-2">Event Coordinator<p><br>
+            <p class="font-extrabold">MInshi MM</p><br>
+               <p class="text-gray-700 text-base">
+                Minshi began her career in the event industry as the Event Coordinator for a few of Hollywood’s most premier promotional companies. Moving on to venue management & marketing, she worked for 5 years as Director of Marketing & Promotions for The Sunset Entertainment Group and 2 years as Director of Special Events for The Downtown Entertainment Group.</p><br>
+<p>
+Seeking to diversify her expertise, Minshi then served as a private consultant for venues across Los Angeles & Orange County as well as the Director of Catering for a special event & motion picture catering company. In addition to being a Certified Conference Management & Event Specialist, she holds her BA in Business with an emphasis in Psychology from Pennsylvania State University.
+</p><br>
+<p>
+Minshi has produced events for The Reelz Channel, The Silver Spoon Gifting Suites, The Oscars & The Emmy's, premiere after parties for IFC & HBO, brand activations for TravelAlberta.com, NHL Network, Kia Motors, Digital River, Vail Valley Foundation, SkyTech Sports and private performances by Prince, Linkin Park & Moby. Minshi has debuted venues at Sundance Film Festival in Park City, Utah with major corporate sponsors like Grey Goose & Red Bull.
+</p><br>
+Combining both years and diversity of experience in the event industry, she decided to start her own Event Production & Design Company -- Harsham events
+               </p>
+               
+        </div>
+     </div>
+      <!--Member 3 -->
+      <div class="bg-white rounded overflow-hidden shadow-lg flex w-full border border-gray-300 ml-4 mt-4">
+        <img class="w-1/3 h-auto object-cover" src="./images/gokul.jpg" alt="Image">
+        <div class="w-2/3 px-6 py-4">
+          <p class="font-bold text-xl mb-2">Event Photographer</p><br>
+             <p class="font-extrabold">Gokul A</p><br>
+              <p class="text-gray-700 text-base">
+                Gokul discovered his love for events back in high school with producing Battle of the Bands and spring concerts that featured local musical acts. After pursuing a degree in marketing at CSUN, he began managing hospitality and security for venues around Los Angeles. During this time, he was also regularly on the road working as a tour manager, production manager, audio engineer, lighting designer, and merchandise manager. In the last five years, gokul has transitioned his expertise into large scale event and festival production, while operating an Audie award winning recording studio.</p><br>
+               <p>
+                He has worked for venues such as The Penthouse at the Huntley Hotel, The Edison, The Highlands Nightclub, The Glendon Bar and Kitchen, and Elevate Lounge; and produced activations at Coachella, Lollapalooza, Outside Lands, Shaky Knees Fest, The Vans Warped Tour, and more.</p><br>
+                <p>
+                  With a total of eight years venue management, 14 years in the touring industry, and 4 years of experiential marketing activations at festivals around the country, there isn't a problem that could arise for which Tim won't have a solution.
+              </p>
+              
+        </div>
+      </div>
+      <!--Member 4 -->
+      <div class="bg-white rounded overflow-hidden shadow-lg flex w-full border border-gray-300 ml-4 mt-4">
+        <img class="w-1/3 h-auto object-cover" src="./images/sumesh.jpeg" alt="Image">
+        <div class="w-2/3 px-6 py-4">
+          <p class="font-bold text-xl mb-2">client coordibator</p><br>
+             <p class="font-extrabold">Sumesh P</p><br>
+              <p class="text-gray-700 text-base">
+                Sumesh discovered his love for events back in high school with producing Battle of the Bands and spring concerts that featured local musical acts. After pursuing a degree in marketing at CSUN, he began managing hospitality and security for venues around Los Angeles. During this time, he was also regularly on the road working as a tour manager, production manager, audio engineer, lighting designer, and merchandise manager. In the last five years, vaishnav has transitioned his expertise into large scale event and festival production, while operating an Audie award winning recording studio.</p><br>
+               <p>
+                He has worked for venues such as The Penthouse at the Huntley Hotel, The Edison, The Highlands Nightclub, The Glendon Bar and Kitchen, and Elevate Lounge; and produced activations at Coachella, Lollapalooza, Outside Lands, Shaky Knees Fest, The Vans Warped Tour, and more.</p><br>
+                <p>
+                  With a total of eight years venue management, 14 years in the touring industry, and 4 years of experiential marketing activations at festivals around the country, there isn't a problem that could arise for which sumesh won't have a solution.
+              </p>
+              
+        </div>
+      </div>
+      <!-- Member 5 -->
+      <div class="bg-white rounded overflow-hidden shadow-lg flex w-full border border-gray-300 ml-4 mt-4">
+        <img class="w-1/3 h-auto object-cover" src="./images/sreelakshmi.jpg" alt="Image">
+        <div class="w-2/3 px-6 py-4">
+          <p class="font-bold text-xl mb-2">Event coordinator</p><br>
+             <p class="font-extrabold">Sreelakshmi PV</p><br>
+              <p class="text-gray-700 text-base">
+                Sreelakshmi began her career in the event industry as the Event Coordinator for a few of Hollywood's most premier promotional companies. Moving on to venue management & marketing, she worked for 5 years as Director of Marketing & Promotions for The Sunset Entertainment Group and 2 years as Director of Special Events for The Downtown Entertainment Group.</p><br>
+               <p>
+                Seeking to diversify her expertise, sreelakshmi then served as a private consultant for venues across Los Angeles & Orange County as well as the Director of Catering for a special event & motion picture catering company. In addition to being a Certified Conference Management & Event Specialist, she holds her BA in Business with an emphasis in Psychology from Pennsylvania State University.</p><br>
+                <p>
+                  Sreelakshmi has produced events for The Reelz Channel, The Silver Spoon Gifting Suites, The Oscars & The Emmy's, premiere after parties for IFC & HBO, brand activations for TravelAlberta.com, NHL Network, Kia Motors, Digital River, Vail Valley Foundation, SkyTech Sports and private performances by Prince, Linkin Park & Moby. Sreelakshmi has debuted venues at Sundance Film Festival in Park City, Utah with major corporate sponsors like Grey Goose & Red Bull.</p><br>
+                  <p>Combining both years and diversity of experience in the event industry, she decided to start her own Event Production & Design Company -- Harsham events</p>
+              
+        </div>
+      </div>
+       <!-- Member 6 -->
+       <div class="bg-white rounded overflow-hidden shadow-lg flex w-full border border-gray-300 ml-4 mt-4 ">
+        <img class="w-1/3 h-96 object-cover" src="./images/neha.jpeg" alt="Image">
+        <div class="w-2/3 px-6 py-4">
+          <p class="font-bold text-xl mb-2">Content Coordinator</p><br>
+             <p class="font-extrabold">Nehamol M Raji</p><br>
+              <p class="text-gray-700 text-base">
+                Neha is a freelance copywriter who specializes in blog content, media reviews and ad copy. She supports elleaevents by curating the website and managing the blog. In addition to writing, she has worked in education, community activism, film, fashion and hospitality. Neha knows a little something about a lot of things-- all of which helps to inform the way she sees the world. Writing is how she processes her experiences and hopes to help others do the same.</p><br>
+               <p>
+                In addition to writing, she currently works in leadership development and like all freelance writers is "busy writing the next great American novel."</p>
+                
+              
+        </div>
+      </div>
+        <!-- Member 7 -->
+        <div class="bg-white rounded overflow-hidden shadow-lg flex w-full border border-gray-300 ml-4 mt-4 ">
+          <img class="w-1/3 h-96 object-cover" src="./images/kripa.jpeg" alt="Image">
+          <div class="w-2/3 px-6 py-4">
+            <p class="font-bold text-xl mb-2"> Budget Coordinator</p><br>
+               <p class="font-extrabold">Kripa S</p><br>
+                <p class="text-gray-700 text-base">
+                  Kripa is a freelance copywriter who specializes in blog content, media reviews and ad copy. She supports harsha events by curating the website and managing the blog. In addition to writing, she has worked in education, community activism, film, fashion and hospitality. Kripa knows a little something about a lot of things-- all of which helps to inform the way she sees the world. Writing is how she processes her experiences and hopes to help others do the same.
+                     </p><br>
+                 <p>
+                  In addition to writing, she currently works in leadership development and like all freelance writers is "busy writing the next great American novel."</p><br>
+                  <p>
+                  With a total of eight years venue management, 14 years in the touring industry, and 4 years of experiential marketing activations at festivals around the country, there isn't a problem that could arise for which Tim won't have a solution.
+                </p>
+                
+          </div>
+        </div>
+  </div>    
+<!-- footer  -->
+ <footer class="bg-red-100 text-black py-12">
+    <div class="container mx-auto text-center">
+      <div class="flex justify-center space-x-10 mb-4">
+        <a href="#" class="text-pink-700 hover:text-white">
+          <i class="fab fa-facebook-f"></i>
+          <span class="block text-lg">Like Us</span>
+        </a>
+        <a href="#" class="text-pink-700 hover:text-white">
+          <i class="fab fa-twitter"></i>
+          <span class="block text-lg">Follow Us</span>
+        </a>
+        <a href="#" class="text-pink-700 hover:text-white">
+          <i class="fab fa-instagram"></i>
+          <span class="block text-lg">Instagram</span>
+        </a>
+        <a href="#" class="text-pink-700 hover:text-white">
+          <i class="fab fa-pinterest"></i>
+          <span class="block text-lg">Join The Pin Party</span>
+        </a>
+      </div>
+      <div class="text-black text-xl pt-8">
+       harshamevents © 2024
+      </div>
+    </div>
+  </footer> 
+   </body>
+ </html>   
+    

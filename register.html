@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsham Event Management Ltd</title>
+    <link rel="icon" type="image/png" href="./images/LOGO_HARSHAM.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+         nav {
+             font-family: "Dancing Script", cursive;
+           
+          }
+         body{
+      font-family: "Josefin Sans", sans-serif;
+    }
+    h1{
+        /* font-family: "Matemasie", sans-serif; */
+        font-family: "Righteous", sans-serif;
+        text-align: center;
+     }
+     * {
+       margin: 0;
+        padding: 0;
+       box-sizing: border-box;
+    }
+    #signin-modal:target {
+             opacity: 1;
+             pointer-events: auto;
+    }  
+    </style>
+</head>
+<body>
+  <nav class="text-2xl font-extrabold z-50 fixed top-0 w-full bg-red-100 bg-opacity-80 nav" >
+    <div class="max-w-screen-xl flex items-center justify-between mx-auto">
+        <div class="flex ">
+            <img src="./images/logo.png" class="h-20" alt="" />
+            <span class="self-center text-pink-800 text-4xl ">Harsham </span>
+        </div>
+         <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1  1h15M1 7h15M1 13h15"/>
+              </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto " id="navbar-dropdown">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0  ">
+                <li>
+                    <a href="./index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 mt-3">Home</a>
+                </li>
+                <li class="relative group ">
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2  text-gray-900  hover:text-blue-700 ">Services
+                        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownNavbar" class="absolute left-0 z-10 hidden w-44 pt-2 group-hover:block">
+                        <div class=" divide-y divide-gray-100 rounded-lg shadow ">
+                            <ul class="py-2 text-xl text-gray-900  bg-white">
+                                <li>
+                                    <a href="./wedding.html" class="block px-4 py-2 hover:text-blue-700  ">Wedding Ceremony</a>
+                                </li>
+                                <li>
+                                    <a href="./coperate.html" class="block px-4 py-2 hover:text-blue-700 ">Corporate Events</a>
+                                </li>
+                                <li>
+                                    <a href="./venue.html" class="block px-4 py-2 hover:text-blue-700  ">Venue Management</a>
+                                </li>
+                                <li>
+                                    <a href="./party.html" class="block px-4 py-2 hover:text-blue-700  ">Party Planning</a>
+                                </li>
+                                <li>
+                                    <a href="./nonprofit.html" class="block px-4 py-2 hover:text-blue-700  ">Non-Profit Events </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./portfolio.html" class="block py-2 px-3 text-gray-900 md:hover:text-blue-700 md:p-0 mt-3">Portfolio</a>
+                </li>
+                <li>
+                    <a href="./team.html" class="block py-2 px-3 text-gray-900 md:hover:text-blue-700 md:p-0 mt-3">Team</a>
+                </li>
+                <li>
+                    <a href="./contact.html" class="block text-gray-900 rounded hover:bg-gray-100   md:hover:text-blue-700 md:p-0 mt-3 mr-56">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#signin-modal" class="block text-gray-900 md:hover:text-blue-700 md:p-0 mt-3 mr-10 ">Sign in/up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Sign In Modal -->
+<div id="signin-modal" class="z-50 fixed inset-0  flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
+<div class="bg-red-100 p-8 rounded shadow-lg w-96 relative">
+<h1 class="text-2xl mb-4  text-pink-700 font-extrabold">Sign In</h1>
+<form>
+  <div class="mb-4">
+    <label class="block text-black text-xl">Username</label>
+    <input type="text" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Enter your username">
+  </div>
+  <div class="mb-4">
+    <label class="block text-black text-xl">Password</label>
+    <input type="password" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Enter your password">
+  </div>
+  <button type="submit" class="bg-pink-600 text-white text-xl hover:text-pink-600 hover:bg-white px-4 py-2 rounded">Sign In</button>
+  <div class="mt-4 text-sm">
+    <a href="./signup.html" class="text-pink-700 text-xl">Sign Up</a> if you're new here.
+  </div>
+</form>
+<a href="#" class="absolute top-0 right-0 mt-2 mr-2 text-gray-600 cursor-pointer">✕</a>
+</div>
+</div>
+<!-- Registration -->
+<div class="w-full pt-24 pb-8">
+  <div class="mx-auto max-w-2xl text-center">
+    <h1 class="text-pink-700 text-5xl pt-8 pb-4">Event Booking</h1>
+    <p class="mt-2 text-lg leading-8 text-black">“Secure your place at Harsham and ensure you don't miss out on an unforgettable experience!”</p>
+  </div>
+  <form action="" class="max-w-2xl ml-80 pt-16">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 mb-4">
+      <div>
+        <label for="first-name" class="block text-sm font-bold text-black mb-2">First name</label>
+        <div class="mt-2.5">
+          <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full px-3 py-2 shadow-lg rounded bg-red-100">
+        </div>
+      </div>
+      <div>
+        <label for="last-name" class="block text-sm font-bold text-black mb-2">Last name</label>
+        <div class="mt-2.5">
+          <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full px-3 py-2 shadow-lg rounded bg-red-100">
+        </div>
+      </div>
+      </div>
+  <div class="mb-4">
+      <label for="email" class="block text-black text-sm font-bold mb-2">Email</label>
+      <input type="email" id="email" name="email" class="w-full px-3 py-2 shadow-lg rounded bg-red-100">
+  </div>
+  <div class="mb-4">
+      <label for="phone" class="block text-black-700 text-sm font-bold mb-2">Phone Number</label>
+      <input type="text" id="phone" class="w-full px-3 py-2 shadow-lg rounded bg-red-100">
+  </div>
+  <div class="mb-4">
+      <label class="block text-black-700 text-sm font-bold mb-2" for="company">Event Date</label>
+      <input type="date" class="w-full px-3 py-2 shadow-lg rounded bg-red-100">
+  </div>
+  <div class="mb-4">
+      <label class="block text-black-700 text-sm font-bold mb-2" for="ticketType">Event Type</label>
+      <select class="w-full px-3 py-2 shadow-lg rounded bg-red-100">
+          <option value="select">Select</option>
+          <option value="vip">Corporate Events</option>
+          <option value="vip">Non-Profit Events</option>
+          <option value="vip">Party Planning</option>
+          <option value="vip">Venue Management</option>
+          <option value="general">Wedding Ceremony</option>
+      </select>
+  </div>
+  <div class="mb-4">
+      <label class="block text-black-700 text-sm font-bold mb-2" for="preferences">Special Requests</label>
+      <textarea class="w-full px-3 py-2 shadow-lg rounded bg-red-100"></textarea>
+  </div>
+  <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center">
+          <input type="checkbox" class="h-4 w-4 text-black-600 focus:ring-pink-500 border-pink-300 rounded">
+          <label for="terms" class="ml-2 block text-sm text-pink-900">I agree to the terms and conditions</label>
+      </div>
+  </div>
+  <div>
+      
+          <button type="submit" class="w-full bg-pink-600 text-white font-bold py-2 px-4 rounded-md hover:bg-pink-700">Register</button>
+      
+  </div>
+  </form>
+</div>
+<!-- footer  -->
+ <footer class="bg-red-100 text-black py-12">
+    <div class="container mx-auto text-center">
+      <div class="flex justify-center space-x-10 mb-4">
+        <a href="#" class="text-pink-700 hover:text-white">
+          <i class="fab fa-facebook-f"></i>
+          <span class="block text-lg">Like Us</span>
+        </a>
+        <a href="#" class="text-pink-700 hover:text-white">
+          <i class="fab fa-twitter"></i>
+          <span class="block text-lg">Follow Us</span>
+        </a>
+        <a href="#" class="text-pink-700 hover:text-white">
+          <i class="fab fa-instagram"></i>
+          <span class="block text-lg">Instagram</span>
+        </a>
+        <a href="#" class="text-pink-700 hover:text-white">
+          <i class="fab fa-pinterest"></i>
+          <span class="block text-lg">Join The Pin Party</span>
+        </a>
+      </div>
+      <div class="text-black text-xl pt-8">
+       harshamevents © 2024
+      </div>
+    </div>
+  </footer> 
+   </body>
+ </html>   
+    
